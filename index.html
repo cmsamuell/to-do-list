@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TO DO LIST</h1>
+    </header>
+    <h2>Bem vindo de volta, Goku</h2>
+    <div class="container">
+        <div class="colum open">
+            <div class="situation">
+                <div class="status">ABERTO</div>
+                <div class="amount">0</div>
+                <div class="buttonAdd">
+                    <button class="btn btn-open" id="addNewTask">+</button>
+                </div>
+            </div>
+            <div class="allTasks">
+                <div class="tasks">
+                    <div class="taskConteiner hidden">
+                        <div class="task">
+                            <p class="taskDescription" id="taskDescriptionTasks">
+                                
+                            </p>
+                        </div>
+                        <div class="taskName">
+                            <img src="/assets/Vector.svg" alt="icon">
+                            <p></p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="colum in-progress">
+            <div class="situation">
+                <div class="status inProgress">EM ANDAMENTO</div>
+                <div class="amount">3</div>
+                <div class="buttonAdd">
+                    <button class="btn btn-open">+</button>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task">
+                    <p class="taskDescription">
+                        
+                    </p>
+                </div>
+                <div class="taskName inProgress">
+                    <img src="/assets/Vector.svg" alt="icon">
+                    <p></p>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task">
+                    <p class="taskDescription">
+                        
+                    </p>
+                </div>
+                <div class="taskName inProgress">
+                    <img src="/assets/Vector.svg" alt="icon">
+                    <p></p>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task">
+                    <p class="taskDescription">
+
+                    </p>
+                </div>
+                <div class="taskName inProgress">
+                    <img src="/assets/Vector.svg" alt="icon">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="colum finished">
+            <div class="situation">
+                <div class="status end">FINALIZADO</div>
+                <div class="amount">3</div>
+                <div class="buttonAdd">
+                    <button class="btn btn-open">+</button>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task">
+                    <p class="taskDescription">
+                         
+                    </p>
+                </div>
+                <div class="taskName end">
+                    <img src="/assets/Vector.svg" alt="icon">
+                    <p></p>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task">
+                    <p class="taskDescription">
+                        
+                    </p>
+                </div>
+                <div class="taskName end">
+                    <img src="/assets/Vector.svg" alt="icon">
+                    <p></p>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task">
+                    <p class="taskDescription">
+                        
+                    </p>
+                </div>
+                <div class="taskName end">
+                    <img src="/assets/Vector.svg" alt="icon">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+          <!--Estrutura do Modal Para adicionar tarefas-->
+    <section class="modal hidden">
+        <div class="headerModal">
+            <div class="dateOpen">
+                <img src="/assets/Vector.svg" class="icon"  alt="icon">
+                <p class="dateOpenTask">Aberto em: 14:16 às 08/12/2022</p>
+            </div>
+            <button class="btn-close">x</button>
+        </div>
+        <div class="title">
+            <input type="text" class="modalTitle" placeholder="TÍTULO" id="inputTitle">
+        </div>
+        <div class="modalDescription">
+            <h2>Descrição da tarefa</h2>
+            <hr class="hr">
+            <textarea cols="139" rows="8" placeholder="Digite para começar" class="inputDescription"></textarea>
+            <button id="buttonSalve" class="popupAlert">Save</button>
+
+            <!-- Estrutura do popup Alert-->
+            <div class="popupWrapper hiddenTasks">
+                <div class="popup">
+                    <div class="popupClose">x</div>
+
+                    <div class="popupContent">
+                        <h3>Preencha todos os campos corretamente</h3>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <div class="overlay hidden"></div>
+            <!--
+                Estrutura do Modal para editar a tarefa existente
+
+            <section class="modalTasks hiddenTasks">
+                <div class="headerModalTasks">
+                    <div class="dateOpenTasks">
+                        <img src="/assets/Vector.svg" class="icon"  alt="icon">
+                        <p class="dateOpenTasks">Aberto em: 14:16 às 08/12/2022</p>
+                    </div>
+                    <button class="btn-closeTasks">x</button>
+                </div>
+                <div class="titleTasks">
+                    <input type="text" class="modalTitleTasks" placeholder="TÍTULO" id="inputTitle">
+                </div>
+                <div class="modalDescriptionTasks">
+                    <h2>Descrição da tarefa</h2>
+                    <hr class="hr">
+                    <textarea cols="139" rows="8" placeholder="Digite para começar" class="inputDescription"></textarea>
+                    <button id="buttonSalveTasks">Save</button>
+                </div>
+            </section>
+            <div class="overlayTasks hiddenTasks"></div>    
+            --> 
+
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
